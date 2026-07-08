@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { companyInfo } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Building2, ShieldCheck, Wrench, Package, MessageSquareQuote, MapPin, Phone, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 // @ts-ignore
 import logoUrl from "@assets/Screenshot_2026-07-08_163442_1783508724749.png";
@@ -18,12 +18,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }, []);
 
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about" },
-    { label: "Why Us", href: "/#why-us" },
-    { label: "Services", href: "/#services" },
-    { label: "Products", href: "/products" },
-    { label: "Testimonials", href: "/#testimonials" },
+    { label: "Home", href: "/", icon: <Home size={16} className="mr-1.5" /> },
+    { label: "About Us", href: "/about", icon: <Building2 size={16} className="mr-1.5" /> },
+    { label: "Why Us", href: "/#why-us", icon: <ShieldCheck size={16} className="mr-1.5" /> },
+    { label: "Services", href: "/#services", icon: <Wrench size={16} className="mr-1.5" /> },
+    { label: "Products", href: "/products", icon: <Package size={16} className="mr-1.5" /> },
+    { label: "Testimonials", href: "/#testimonials", icon: <MessageSquareQuote size={16} className="mr-1.5" /> },
   ];
 
   return (
@@ -47,13 +47,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className="flex items-center text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
               >
+                {link.icon}
                 {link.label}
               </Link>
             ))}
@@ -81,13 +82,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-medium text-foreground py-2 border-b border-border/50"
+                className="flex items-center text-base font-medium text-foreground py-3 border-b border-border/50"
               >
+                {link.icon}
                 {link.label}
               </Link>
             ))}
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4">
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold mt-4 h-12">
                 Request Quote
               </Button>
             </Link>
@@ -119,10 +121,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 className="text-lg font-bold mb-6 text-white tracking-wide">Quick Links</h4>
             <ul className="space-y-3 text-zinc-400 text-sm">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors">Products</Link></li>
-              <li><Link href="/#services" className="hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors flex items-center"><Building2 size={14} className="mr-2"/> About Us</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors flex items-center"><Package size={14} className="mr-2"/> Products</Link></li>
+              <li><Link href="/#services" className="hover:text-primary transition-colors flex items-center"><Wrench size={14} className="mr-2"/> Services</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors flex items-center"><Phone size={14} className="mr-2"/> Contact</Link></li>
             </ul>
           </div>
 
@@ -130,17 +132,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <h4 className="text-lg font-bold mb-6 text-white tracking-wide">Contact Us</h4>
             <ul className="space-y-4 text-zinc-400 text-sm">
               <li className="flex gap-3">
-                <span className="text-primary mt-1">📍</span>
+                <MapPin className="text-primary mt-1 flex-shrink-0" size={18} />
                 <span>{companyInfo.address}</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-primary mt-1">📞</span>
+                <Phone className="text-primary mt-1 flex-shrink-0" size={18} />
                 <span className="flex flex-col">
                   {companyInfo.phones.map(p => <span key={p}>{p}</span>)}
                 </span>
               </li>
               <li className="flex gap-3">
-                <span className="text-primary mt-1">✉️</span>
+                <Mail className="text-primary mt-1 flex-shrink-0" size={18} />
                 <span>{companyInfo.email}</span>
               </li>
             </ul>

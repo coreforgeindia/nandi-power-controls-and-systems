@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, ShieldCheck, Factory, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { products, testimonials, keyStrengths, companyInfo } from "@/data/content";
+import heroBg from "@/assets/hero-bg.png";
 
 export default function Home() {
   const fadeIn = {
@@ -23,37 +24,37 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-zinc-950">
+      <section 
+        className="relative min-h-[100vh] md:min-h-[115vh] flex items-end pb-20 justify-center overflow-hidden bg-zinc-950"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-900/90 to-transparent z-10" />
-          {/* Abstract industrial background pattern */}
-          <div className="w-full h-full opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent z-10" />
         </div>
         
-        <div className="container relative z-10 px-4 md:px-8 py-20">
+        <div className="container relative z-10 px-4 md:px-8">
           <motion.div 
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-3xl"
+            className="max-w-4xl text-center mx-auto"
           >
-            <motion.div variants={fadeIn} className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm tracking-wide">
-              {companyInfo.certifications.join(" • ")}
-            </motion.div>
-            <motion.h1 variants={fadeIn} className="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
-              Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">Power Solutions</span> for Industry.
-            </motion.h1>
-            <motion.p variants={fadeIn} className="text-lg md:text-xl text-zinc-400 mb-10 max-w-2xl leading-relaxed">
-              Precision-engineered Power Distribution Transformers, SPMs, and Heavy Duty Fabrication. Built for reliability since {companyInfo.established}.
+            <motion.p variants={fadeIn} className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Precision-engineered Power Distribution Transformers, SPMs, and Heavy Duty Fabrication. Built for reliability.
             </motion.p>
-            <motion.div variants={fadeIn} className="flex flex-wrap gap-4">
+            <motion.div variants={fadeIn} className="flex flex-wrap justify-center gap-4">
               <Link href="/products">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-base">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold h-14 px-8 text-base shadow-xl shadow-primary/20">
                   View Products <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link href="/contact">
-                <Button size="lg" variant="outline" className="h-14 px-8 text-base bg-white/5 text-white border-white/20 hover:bg-white/10 hover:text-white">
+                <Button size="lg" variant="outline" className="h-14 px-8 text-base bg-zinc-900/50 backdrop-blur-sm text-white border-white/20 hover:bg-white/10 hover:text-white">
                   Request a Quote
                 </Button>
               </Link>
@@ -169,11 +170,14 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.slice(0, 3).map((product, i) => (
-              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 hover:shadow-md transition-shadow flex flex-col">
+                <div className="bg-zinc-950 rounded-xl mb-6 flex items-center justify-center p-6 h-48">
+                  <img src={product.image} alt={product.title} className="h-full w-full object-contain" />
+                </div>
                 <h3 className="text-xl font-bold mb-3">{product.title}</h3>
-                <p className="text-muted-foreground mb-6 line-clamp-2">{product.description}</p>
-                <Link href="/products">
-                  <span className="text-primary font-semibold text-sm hover:underline">Read More &rarr;</span>
+                <p className="text-muted-foreground mb-6 line-clamp-2 flex-grow">{product.description}</p>
+                <Link href={`/products/${product.id}`}>
+                  <span className="text-primary font-semibold text-sm hover:underline">View Details &rarr;</span>
                 </Link>
               </div>
             ))}

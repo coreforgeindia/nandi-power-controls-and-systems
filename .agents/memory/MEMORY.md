@@ -1,0 +1,1 @@
+- [Brochure asset extraction](brochure-asset-extraction.md) — how to pull real product photos/cover art out of an uploaded PDF brochure for site content.
