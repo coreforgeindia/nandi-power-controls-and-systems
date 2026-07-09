@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle2, ShieldCheck, Factory, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { products, keyStrengths, companyInfo, stats } from "@/data/content";
+import { products, companyInfo, stats } from "@/data/content";
 import heroBg from "@/assets/hero-bg.png";
 import { AnimatedCounter } from "@/components/animated-counter";
 
@@ -64,40 +64,6 @@ export default function Home() {
               </Link>
             </motion.div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section id="why-us" className="py-24 bg-white">
-        <div className="container mx-auto px-4 md:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Nandi Power?</h2>
-            <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
-            <p className="text-muted-foreground text-lg">
-              Decades of expertise combining cutting-edge technology with rigorous quality control to deliver unmatched industrial reliability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {keyStrengths.map((strength, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="p-8 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-primary/30 transition-colors group"
-              >
-                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform">
-                  <ShieldCheck size={28} />
-                </div>
-                <h3 className="text-xl font-bold mb-3">{strength.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {strength.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

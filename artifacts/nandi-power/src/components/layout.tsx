@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { companyInfo } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Building2, ShieldCheck, Package, Images, MapPin, Phone, Mail, Wrench } from "lucide-react";
+import { Menu, X, Home, Building2, Package, Images, MapPin, Phone, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 // @ts-ignore
 import logoUrl from "@assets/Screenshot_2026-07-08_163442_1783508724749.png";
@@ -20,7 +20,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const navLinks = [
     { label: "Home", href: "/", icon: <Home size={16} className="mr-1.5" /> },
     { label: "About Us", href: "/about", icon: <Building2 size={16} className="mr-1.5" /> },
-    { label: "Why Us", href: "/#why-us", icon: <ShieldCheck size={16} className="mr-1.5" /> },
     { label: "Products & Services", href: "/products", icon: <Package size={16} className="mr-1.5" /> },
     { label: "Gallery", href: "/gallery", icon: <Images size={16} className="mr-1.5" /> },
   ];
