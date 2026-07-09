@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { companyInfo } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Building2, ShieldCheck, Wrench, Package, MapPin, Phone, Mail, Factory, FolderKanban, Images, BookOpen, HelpCircle } from "lucide-react";
+import { Menu, X, Home, Building2, ShieldCheck, Package, Images, MapPin, Phone, Mail, Wrench } from "lucide-react";
 import { useState, useEffect } from "react";
 // @ts-ignore
 import logoUrl from "@assets/Screenshot_2026-07-08_163442_1783508724749.png";
@@ -21,13 +21,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { label: "Home", href: "/", icon: <Home size={16} className="mr-1.5" /> },
     { label: "About Us", href: "/about", icon: <Building2 size={16} className="mr-1.5" /> },
     { label: "Why Us", href: "/#why-us", icon: <ShieldCheck size={16} className="mr-1.5" /> },
-    { label: "Services", href: "/#services", icon: <Wrench size={16} className="mr-1.5" /> },
-    { label: "Products", href: "/products", icon: <Package size={16} className="mr-1.5" /> },
-    { label: "Industries", href: "/industries", icon: <Factory size={16} className="mr-1.5" /> },
-    { label: "Projects", href: "/projects", icon: <FolderKanban size={16} className="mr-1.5" /> },
+    { label: "Products & Services", href: "/products", icon: <Package size={16} className="mr-1.5" /> },
     { label: "Gallery", href: "/gallery", icon: <Images size={16} className="mr-1.5" /> },
-    { label: "Resources", href: "/resources", icon: <BookOpen size={16} className="mr-1.5" /> },
-    { label: "FAQ", href: "/faq", icon: <HelpCircle size={16} className="mr-1.5" /> },
   ];
 
   return (
@@ -126,8 +121,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <h4 className="text-lg font-bold mb-6 text-white tracking-wide">Quick Links</h4>
             <ul className="space-y-3 text-zinc-400 text-sm">
               <li><Link href="/about" className="hover:text-primary transition-colors flex items-center"><Building2 size={14} className="mr-2"/> About Us</Link></li>
-              <li><Link href="/products" className="hover:text-primary transition-colors flex items-center"><Package size={14} className="mr-2"/> Products</Link></li>
-              <li><Link href="/#services" className="hover:text-primary transition-colors flex items-center"><Wrench size={14} className="mr-2"/> Services</Link></li>
+              <li><Link href="/products" className="hover:text-primary transition-colors flex items-center"><Package size={14} className="mr-2"/> Products & Services</Link></li>
+              <li><Link href="/gallery" className="hover:text-primary transition-colors flex items-center"><Images size={14} className="mr-2"/> Gallery</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition-colors flex items-center"><Phone size={14} className="mr-2"/> Contact</Link></li>
             </ul>
           </div>
