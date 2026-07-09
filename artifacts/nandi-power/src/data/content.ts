@@ -182,3 +182,55 @@ export const testimonials = [
     company: "Heavy Engineering Corp"
   }
 ];
+
+export const industries = [
+  { id: "manufacturing", name: "Manufacturing", icon: "Factory", description: "Custom power solutions for heavy manufacturing environments." },
+  { id: "power-plants", name: "Power Plants", icon: "Zap", description: "High-capacity transformers and control systems for power generation." },
+  { id: "automation", name: "Automation", icon: "Settings2", description: "Integrated automation systems and SPMs for industrial lines." },
+  { id: "food-industry", name: "Food Industry", icon: "Utensils", description: "Safe, hygienic electrical systems compliant with food-grade standards." },
+  { id: "commercial-buildings", name: "Commercial Buildings", icon: "Building2", description: "Distribution transformers and panels for large commercial complexes." },
+  { id: "infrastructure", name: "Infrastructure", icon: "Landmark", description: "Reliable power distribution for roads, bridges, and civic projects." },
+  { id: "textile", name: "Textile", icon: "Layers", description: "Stable voltage and power systems for sensitive textile machinery." },
+  { id: "pharmaceutical", name: "Pharmaceutical", icon: "FlaskConical", description: "Precision-controlled power for clean-room pharmaceutical facilities." },
+  { id: "engineering", name: "Engineering", icon: "Cog", description: "Heavy-duty electrical solutions for engineering and fabrication plants." },
+  { id: "renewable-energy", name: "Renewable Energy", icon: "Wind", description: "Step-up transformers and grid-tie solutions for solar and wind plants." }
+];
+
+export const stats = [
+  { value: 14, suffix: "+", label: "Years Experience" },
+  { value: 500, suffix: "+", label: "Projects Completed" },
+  { value: 300, suffix: "+", label: "Happy Clients" },
+  { value: 12, suffix: "+", label: "Cities Served" },
+  { value: 10, suffix: "+", label: "Industries Served" }
+];
+
+export const projects = [
+  { id: "p1", name: "500kVA Distribution Transformer", location: "Peenya Industrial Area, Bengaluru", industry: "Manufacturing", description: "Design, manufacturing, and installation of a 500kVA, 11kV/415V oil-cooled distribution transformer for a large automotive components plant.", technologies: ["Oil-Cooled Transformer", "OLTC", "RTCC Panel"] },
+  { id: "p2", name: "Automation SPM Line", location: "Nelamangala, Bengaluru", industry: "Automation", description: "Custom SPM fabrication for a semi-automated assembly line requiring precision motion control and high-duty-cycle performance.", technologies: ["SPM Fabrication", "Heavy-Duty Enclosure", "Sheet Metal Works"] },
+  { id: "p3", name: "Dry Type Isolation Transformers", location: "Doddaballapur KIADB, Bengaluru", industry: "Pharmaceutical", description: "Supply and commissioning of 200kVA dry-type isolation transformers for a clean-room pharmaceutical facility requiring zero-EMI power.", technologies: ["Dry Type Transformer", "Isolation Transformer", "IS:2026"] },
+  { id: "p4", name: "33kV Step-Down Substation", location: "Tumkur Industrial Zone", industry: "Power Plants", description: "End-to-end substation supply including 2MVA 33kV/11kV power transformers with CPRI-tested designs and full protective relay panels.", technologies: ["Power Transformer", "CPRI Tested", "Protective Relay"] },
+  { id: "p5", name: "Textile Mill Power Distribution", location: "Ramanagaram, Karnataka", industry: "Textile", description: "Comprehensive power distribution upgrades including 4 × 250kVA distribution transformers for a 24×7 textile spinning mill.", technologies: ["Oil-Cooled Transformer", "Tap-Changer", "IS:1180"] },
+  { id: "p6", name: "Renewable Solar Farm Transformer", location: "Pavagada Solar Park, Karnataka", industry: "Renewable Energy", description: "Custom 1000kVA step-up transformers for a 5MW rooftop solar installation, designed for high-efficiency low-loss operation.", technologies: ["Step-Up Transformer", "CRGO Core", "Low Loss Design"] }
+];
+
+export const faqs = [
+  { category: "Products", question: "What is the maximum kVA rating you manufacture?", answer: "We manufacture transformers from 5kVA up to 5000kVA. For requirements above 5000kVA, please contact us for a custom quotation." },
+  { category: "Products", question: "Do you offer both Oil-Cooled and Air-Cooled transformers?", answer: "Yes. We offer Oil-Cooled (ONAN/ONAF) and Air-Cooled (Dry Type) transformers across the full kVA range, in aluminium or copper winding." },
+  { category: "Products", question: "What voltage classes do your transformers cover?", answer: "Our standard range covers 11kV, 22kV, and 33kV class transformers (HV side) with various LV outputs as per customer requirement." },
+  { category: "Quality", question: "Are your transformers type-tested?", answer: "Yes. All standard designs up to 500kVA are type-tested at CPRI (Central Power Research Institute). Type tests include Impulse, Short-Circuit (SC), Open-Circuit (OC), and Temperature Rise tests." },
+  { category: "Quality", question: "Which standards do your products conform to?", answer: "Our transformers are designed and tested to IS:2026, IS:1180, IEC:76, and BS:171, as well as customer-specific requirements." },
+  { category: "Quality", question: "What certifications does Nandi Power hold?", answer: "We are an ISO 9001:2015 certified company with products CPRI-tested for type tests." },
+  { category: "Services", question: "Do you offer custom transformer designs?", answer: "Yes. Our engineering team specialises in custom-designed transformers. Customers are welcome to participate in design reviews and stage inspections." },
+  { category: "Services", question: "What after-sales services do you provide?", answer: "We provide detailed test certificates and guarantees for every unit. Our team offers field support for commissioning and troubleshooting on request." },
+  { category: "Ordering", question: "What is your typical lead time for an order?", answer: "Lead times vary by rating and order volume. Standard designs (5kVA–500kVA) typically ship within 3–6 weeks. Larger or custom units require 6–12 weeks. Contact us for a precise timeline." },
+  { category: "Ordering", question: "How do I request a quotation?", answer: "Fill in the Request Quote form on our Contact page or call us directly at +91 9611577845 / +91 9482375945. Include your kVA requirement, voltage ratio, cooling type, and quantity." }
+];
+
+export const resources = [
+  { id: "company-profile", title: "Company Profile", description: "Full company overview including certifications, product range, manufacturing capabilities, and key contact details.", type: "Company Profile", fileSize: "2.4 MB" },
+  { id: "product-catalogue", title: "Product Catalogue", description: "Complete product catalogue for all distribution transformers, dry type transformers, isolation transformers, and SPM services.", type: "Catalogue", fileSize: "4.1 MB" },
+  { id: "transformer-datasheet-5-500", title: "Transformer Datasheet — 5kVA to 500kVA", description: "Technical specifications, electrical parameters, and dimensional drawings for our standard range up to 500kVA.", type: "Technical Datasheet", fileSize: "1.8 MB" },
+  { id: "transformer-datasheet-500-5000", title: "Transformer Datasheet — 500kVA to 5000kVA", description: "Technical datasheet for our large-capacity oil-cooled distribution transformers up to 5000kVA.", type: "Technical Datasheet", fileSize: "2.1 MB" },
+  { id: "iso-certificate", title: "ISO 9001:2015 Certificate", description: "Our current ISO 9001:2015 quality management system certificate issued by an accredited certification body.", type: "Certificate", fileSize: "0.3 MB" },
+  { id: "cpri-test-report", title: "CPRI Type Test Reports", description: "CPRI type test reports covering Impulse, Short-Circuit, Open-Circuit, and Temperature Rise tests for standard designs.", type: "Test Report", fileSize: "3.5 MB" }
+];

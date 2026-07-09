@@ -19,6 +19,8 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
   
+  --color-navy: #0B3C5D;
+  
   --font-sans: var(--app-font-sans);
   --font-display: var(--app-font-display);
 }

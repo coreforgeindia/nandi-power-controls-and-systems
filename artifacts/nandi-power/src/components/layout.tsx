@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { companyInfo } from "@/data/content";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Home, Building2, ShieldCheck, Wrench, Package, MessageSquareQuote, MapPin, Phone, Mail } from "lucide-react";
+import { Menu, X, Home, Building2, ShieldCheck, Wrench, Package, MapPin, Phone, Mail, Factory, FolderKanban, Images, BookOpen, HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 // @ts-ignore
 import logoUrl from "@assets/Screenshot_2026-07-08_163442_1783508724749.png";
@@ -23,7 +23,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { label: "Why Us", href: "/#why-us", icon: <ShieldCheck size={16} className="mr-1.5" /> },
     { label: "Services", href: "/#services", icon: <Wrench size={16} className="mr-1.5" /> },
     { label: "Products", href: "/products", icon: <Package size={16} className="mr-1.5" /> },
-    { label: "Testimonials", href: "/#testimonials", icon: <MessageSquareQuote size={16} className="mr-1.5" /> },
+    { label: "Industries", href: "/industries", icon: <Factory size={16} className="mr-1.5" /> },
+    { label: "Projects", href: "/projects", icon: <FolderKanban size={16} className="mr-1.5" /> },
+    { label: "Gallery", href: "/gallery", icon: <Images size={16} className="mr-1.5" /> },
+    { label: "Resources", href: "/resources", icon: <BookOpen size={16} className="mr-1.5" /> },
+    { label: "FAQ", href: "/faq", icon: <HelpCircle size={16} className="mr-1.5" /> },
   ];
 
   return (
