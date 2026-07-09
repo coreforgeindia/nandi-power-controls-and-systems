@@ -27,7 +27,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
     { label: "Products & Services", href: "/products", icon: <Package size={14} className="mr-1" /> },
     { label: "Gallery", href: "/gallery", icon: <Images size={14} className="mr-1" /> },
     { label: "FAQs", href: "/faqs", icon: <HelpCircle size={14} className="mr-1" /> },
-    { label: "Contact", href: "/contact", icon: <PhoneCall size={14} className="mr-1" /> },
   ];
 
   return (
@@ -49,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
               </span>
             </div>
           </Link>
-
+          
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-5">
             {navLinks.map((link) => {
@@ -77,7 +76,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             })}
             <Link href="/contact" className="ml-2">
               <Button className="bg-primary hover:bg-primary/90 text-white text-xs font-bold shadow-md shadow-primary/20 rounded-xl px-4 py-2 flex items-center gap-1">
-                Request Quote <ArrowRight size={12} />
+                Contact Us <ArrowRight size={12} />
               </Button>
             </Link>
           </nav>
@@ -114,7 +113,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             })}
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="mt-4 px-2">
               <Button className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-12 rounded-xl flex items-center justify-center gap-1.5">
-                Request Quote <ArrowRight size={16} />
+                Contact Us <ArrowRight size={16} />
               </Button>
             </Link>
           </div>
