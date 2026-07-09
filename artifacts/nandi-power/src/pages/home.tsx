@@ -45,6 +45,9 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl text-center mx-auto"
           >
+            <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
+              NANDI POWER CONTROLS & SYSTEMS
+            </motion.h1>
             <motion.p variants={fadeIn} className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               Precision-engineered Power Distribution Transformers, SPMs, and Heavy Duty Fabrication. Built for reliability.
             </motion.p>
